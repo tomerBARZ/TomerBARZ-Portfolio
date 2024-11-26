@@ -1,0 +1,12 @@
+.vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    
+    background: linear-gradient(to bottom right, #1dd3b0b3, hsla(258, 100%, 66%, 0.702));
+  
+    z-index: 1;
+  }
