@@ -1,0 +1,23 @@
+.fade-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fade-button img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover; /* Ensures the image covers the button */
+    display: block; /* Removes inline block space */
+}
+
+.fade-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 100%); */
+    pointer-events: none; /* Allow clicks to go through the pseudo-element */
+}
