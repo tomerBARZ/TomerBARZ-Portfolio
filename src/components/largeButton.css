@@ -5,8 +5,7 @@
 }
 
 .fade-button img {
-    max-width: 90%;
-    max-height: 90%;
+    width: 9.5vw;
     object-fit: cover; /* Ensures the image covers the button */
     display: block; /* Removes inline block space */
 }

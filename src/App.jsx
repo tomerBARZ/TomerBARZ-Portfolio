@@ -8,11 +8,14 @@ import HorizontalLine from './components/horizontalLine'
 import './App.css'
 import SectionDiv from './components/sectionDiv'
 import LargeButton from './components/largeButton'
+import BloomPage from './pages/bloomPage'
+import CopyPastePage from './pages/copyPastePage'
 
 
 function App() {
   const [letterCounter, setLetterCounter] = useState(0);
   const [enableScroll, setEnableScroll] = useState(false);
+  const [CurrPage, setCurrPage] = useState(undefined);
 
   useEffect(() => {
     if (letterCounter >= 14) {
@@ -24,7 +27,7 @@ function App() {
     } else {
       setEnableScroll(false);
     }
-  }, [letterCounter]);
+  }, [letterCounter, CurrPage]);
 
   return (
     <>
@@ -45,46 +48,55 @@ function App() {
             />
           </h1>
           <HorizontalLine startAnimation={letterCounter >= 14} maxWidth="70%" height="4px" color="hsl(0, 100%, 97%)" duration="2s" />
-          <div style={{ overflowY: "auto", width: "100%", height: "75vh", marginTop: "3vh", overflowY: enableScroll ? 'auto' : 'hidden' }}>
-            <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={1800}> {/*GAME AND GRAPHICS*/}
-              <LargeButton> {/*BLOOM*/}
-                <img src='bloom.png'></img>
-              </LargeButton>
-              <LargeButton>{/*COPY PASTE*/}
-              </LargeButton>
-              <LargeButton> {/*DUNGEON GAME*/}
-              </LargeButton>
-              <LargeButton> {/*UNREAL GRAPPLER*/}
-              </LargeButton>
-            </SectionDiv>
-            <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={2800}> {/*WEB DEV*/}
-              <LargeButton> {/*POINTS*/}
-              </LargeButton>
-              <LargeButton> {/*PRACTICAL MEDIA*/}
-              </LargeButton>
-              <LargeButton> {/*ACES*/}
-              </LargeButton>
-            </SectionDiv>
-            <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={3800}> {/*VISION*/}
-              <LargeButton> {/*AUTO ALIGN TOOL*/}
-              </LargeButton>
-              <LargeButton> {/*SkyVision*/}
-              </LargeButton>
-              <LargeButton> {/*Antivision*/}
-              </LargeButton>
-            </SectionDiv>
-            <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={4800}> {/*CONTROL AND SIMULATIONS*/}
-              <LargeButton> {/*CRESCENDO MPC*/}
-              </LargeButton>
-              <LargeButton> {/*CHARGED UP VISUALIZER*/}
-              </LargeButton>
-              <LargeButton>{/*4416 AUTO*/}
-              </LargeButton> 
-            </SectionDiv>
-          </div>
+          {CurrPage ?
+            <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+              {CurrPage}
+              <button onClick={() => {setCurrPage(undefined); setEnableScroll(false)}} style={{color:"white", backgroundColor:"transparent", border:"1px solid white", marginTop:"10vh", width:"10vw"}}>
+                ⇐ Return Home
+              </button>
+            </div> :
+            <div style={{ overflowY: "auto", width: "100%", height: "75vh", marginTop: "3vh", overflowY: enableScroll ? 'auto' : 'hidden' }}>
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={1800}> {/*GAME AND GRAPHICS*/}
+                <LargeButton onClick={() => { setCurrPage(<BloomPage />) }}> {/*BLOOM*/}
+                  <img src='bloom_button.png'></img>
+                </LargeButton >
+                <LargeButton onClick={() => { setCurrPage(<CopyPastePage />) }}>{/*COPY PASTE*/}
+                <img src='copy_paste_button.png'></img>
+                </LargeButton>
+                <LargeButton> {/*DUNGEON GAME*/}
+                </LargeButton>
+                <LargeButton> {/*UNREAL GRAPPLER*/}
+                </LargeButton>
+              </SectionDiv>
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={2800}> {/*WEB DEV*/}
+                <LargeButton> {/*POINTS*/}
+                </LargeButton>
+                <LargeButton> {/*PRACTICAL MEDIA*/}
+                </LargeButton>
+                <LargeButton> {/*ACES*/}
+                </LargeButton>
+              </SectionDiv>
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={3800}> {/*VISION*/}
+                <LargeButton> {/*AUTO ALIGN TOOL*/}
+                </LargeButton>
+                <LargeButton> {/*SkyVision*/}
+                </LargeButton>
+                <LargeButton> {/*Antivision*/}
+                </LargeButton>
+              </SectionDiv>
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={4800}> {/*CONTROL AND SIMULATIONS*/}
+                <LargeButton> {/*CRESCENDO MPC*/}
+                </LargeButton>
+                <LargeButton> {/*CHARGED UP VISUALIZER*/}
+                </LargeButton>
+                <LargeButton>{/*4416 AUTO*/}
+                </LargeButton>
+              </SectionDiv>
+            </div>
+          }
         </div>
       </div>
-      <label className='glow' style={{ width: "100%", textAlign: "center", display: "flex", justifyContent: "center", zIndex:"999", position:"relative" }}>Call me +972-528408878  (｡•̀ᴗ-)✧</label>
+      <label className='glow' style={{ width: "100%", textAlign: "center", display: "flex", justifyContent: "center", zIndex: "999", position: "relative" }}>Call me +972-528408878  (｡•̀ᴗ-)✧</label>
     </>
   )
 }
