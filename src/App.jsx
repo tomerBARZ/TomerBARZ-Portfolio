@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import { OrbitSpace } from 'orbit-space'
 import { Typewriter } from 'react-simple-typewriter'
 import Vignette from './components/vignette'
@@ -15,18 +13,22 @@ import GrapplingHookPage from './pages/grapplingHookPage'
 import PointsPage from './pages/pointsPage'
 import PracticalMediaPage from './pages/practicalmediaPage'
 import AcesPage from './pages/acesPage'
+import AutoAlignPage from './pages/autoAlignPage'
+import SkyvisionPage from './pages/skyvisionPage'
+import AntivisionPage from './pages/antivisionPage'
 
 
 function App() {
   const [letterCounter, setLetterCounter] = useState(0);
   const [enableScroll, setEnableScroll] = useState(false);
   const [CurrPage, setCurrPage] = useState(undefined);
+  const [loadQuick, setLoadQuick] = useState(false);
 
   useEffect(() => {
     if (letterCounter >= 14) {
       const timer = setTimeout(() => {
         setEnableScroll(true);
-      }, 5800);
+      }, 4000);
 
       return () => clearTimeout(timer);
     } else {
@@ -56,12 +58,12 @@ function App() {
           {CurrPage ?
             <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
               {CurrPage}
-              <button onClick={() => { setCurrPage(undefined); setEnableScroll(false) }} style={{ color: "white", backgroundColor: "transparent", border: "1px solid white", width: "10vw" }}>
+              <button onClick={() => { setCurrPage(undefined); setLoadQuick(true); }} style={{ color: "white", backgroundColor: "transparent", border: "1px solid white", width: "10vw" }}>
                 ⇐ Return Home
               </button>
             </div> :
             <div style={{ overflowY: "auto", width: "100%", height: "75vh", marginTop: "3vh", overflowY: enableScroll ? 'auto' : 'hidden' }}>
-              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={1800} title='• GAMES AND GRAPHICS'> {/*GAME AND GRAPHICS*/}
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={loadQuick ? 0 : 1800} title='• GAMES AND GRAPHICS'> {/*GAME AND GRAPHICS*/}
                 <LargeButton onClick={() => { setCurrPage(<BloomPage />) }}> {/*BLOOM*/}
                   <img src='bloom_button.png'></img>
                 </LargeButton >
@@ -75,7 +77,7 @@ function App() {
                   <img src='unreal_button.png'></img>
                 </LargeButton>
               </SectionDiv>
-              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={2800} title='• WEB DEVELOPMENT'> {/*WEB DEV*/}
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={loadQuick ? 0 : 2400} title='• WEB DEVELOPMENT'> {/*WEB DEV*/}
                 <LargeButton onClick={() => { setCurrPage(<AcesPage />) }}> {/*ACES*/}
                   <img src='acesonline_button.png'></img>
                 </LargeButton>
@@ -86,15 +88,18 @@ function App() {
                   <img src='practicalmedia_button.png'></img>
                 </LargeButton>
               </SectionDiv>
-              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={3800} title='• VISION AND IMAGE PROCESSING'> {/*VISION*/}
-                <LargeButton> {/*AUTO ALIGN TOOL*/}
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={loadQuick ? 0 : 3200} title='• VISION AND IMAGE PROCESSING'> {/*VISION*/}
+                <LargeButton onClick={() => { setCurrPage(<AutoAlignPage />) }}> {/*AUTO ALIGN TOOL*/}
+                  <img src='autoalign_button.png'></img>
                 </LargeButton>
-                <LargeButton> {/*SkyVision*/}
+                <LargeButton onClick={() => { setCurrPage(<SkyvisionPage />) }}> {/*SkyVision*/}
+                  <img src='skyvision_button.jpg'></img>
                 </LargeButton>
-                <LargeButton> {/*Antivision*/}
+                <LargeButton onClick={() => { setCurrPage(<AntivisionPage />) }}> {/*Antivision*/}
+                  <img src='antivision_button.jpg'></img>
                 </LargeButton>
               </SectionDiv>
-              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={4800} title='• CONTROL AND SIMULATIONS'> {/*CONTROL AND SIMULATIONS*/}
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={loadQuick ? 0 : 4000} title='• CONTROL AND SIMULATIONS'> {/*CONTROL AND SIMULATIONS*/}
                 <LargeButton> {/*CRESCENDO MPC*/}
                 </LargeButton>
                 <LargeButton> {/*CHARGED UP VISUALIZER*/}
