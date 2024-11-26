@@ -16,6 +16,7 @@ import AcesPage from './pages/acesPage'
 import AutoAlignPage from './pages/autoAlignPage'
 import SkyvisionPage from './pages/skyvisionPage'
 import AntivisionPage from './pages/antivisionPage'
+import MPCPage from './pages/mpcPage'
 
 
 function App() {
@@ -100,7 +101,8 @@ function App() {
                 </LargeButton>
               </SectionDiv>
               <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={loadQuick ? 0 : 4000} title='• CONTROL AND SIMULATIONS'> {/*CONTROL AND SIMULATIONS*/}
-                <LargeButton> {/*CRESCENDO MPC*/}
+                <LargeButton  onClick={() => { setCurrPage(<MPCPage />) }}> {/*CRESCENDO MPC*/}
+                  <img src='mpc_button.png'></img>
                 </LargeButton>
                 <LargeButton> {/*CHARGED UP VISUALIZER*/}
                 </LargeButton>
