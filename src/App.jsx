@@ -17,6 +17,8 @@ import AutoAlignPage from './pages/autoAlignPage'
 import SkyvisionPage from './pages/skyvisionPage'
 import AntivisionPage from './pages/antivisionPage'
 import MPCPage from './pages/mpcPage'
+import VisualizerPage from './pages/visualizerPage'
+import SkynetPage from './pages/skynetPage'
 
 
 function App() {
@@ -101,12 +103,14 @@ function App() {
                 </LargeButton>
               </SectionDiv>
               <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={loadQuick ? 0 : 4000} title='• CONTROL AND SIMULATIONS'> {/*CONTROL AND SIMULATIONS*/}
-                <LargeButton  onClick={() => { setCurrPage(<MPCPage />) }}> {/*CRESCENDO MPC*/}
+                <LargeButton onClick={() => { setCurrPage(<MPCPage />) }}> {/*CRESCENDO MPC*/}
                   <img src='mpc_button.png'></img>
                 </LargeButton>
-                <LargeButton> {/*CHARGED UP VISUALIZER*/}
+                <LargeButton onClick={() => { setCurrPage(<VisualizerPage />) }}> {/*CHARGED UP VISUALIZER*/}
+                  <img src='visualizer_button.png'></img>
                 </LargeButton>
-                <LargeButton>{/*4416 AUTO*/}
+                <LargeButton onClick={() => { setCurrPage(<SkynetPage />) }}>{/*4416 AUTO*/}
+                  <img src='skynet_button.png'></img>
                 </LargeButton>
               </SectionDiv>
             </div>
