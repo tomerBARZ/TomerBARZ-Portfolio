@@ -1,5 +1,5 @@
 import React from 'react';
-import './Vignette.css';
+import './vignette.css';
 
 const Vignette = () => {
   return <div className="vignette" />;
