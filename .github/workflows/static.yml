@@ -21,11 +21,11 @@ jobs:
         with:
           node-version: '18'  # Set the version you require
 
+      - name: List files for debugging
+        run: ls ./src -R .  # List project files to check if vignette.css is available
+
       - name: Install dependencies
         run: npm install
-
-      - name: List files for debugging
-        run: ls -R .  # List project files to check if vignette.css is available
 
       - name: Build the project
         run: npm run build
