@@ -28,7 +28,7 @@ const SectionDiv: React.FC<{ startAnimation: boolean, duration?: string, delayms
                 flexDirection:"column"
             }}
         >
-            <h2 style={{marginTop:"0px"}}>{title}</h2>
+            <h2 style={{marginTop:"0px", fontWeight:"lighter", width:"100%", textAlign:"center"}}>{title}</h2>
             <div style={{marginLeft:"3vw", display:"flex"}}>
                 {children}
             </div>

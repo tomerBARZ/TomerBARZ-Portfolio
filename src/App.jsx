@@ -66,50 +66,50 @@ function App() {
               </button>
             </div> :
             <div style={{ overflowY: "auto", width: "100%", height: "75vh", marginTop: "3vh", overflowY: enableScroll ? 'auto' : 'hidden' }}>
-              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={loadQuick ? 0 : 1800} title='• GAMES AND GRAPHICS'> {/*GAME AND GRAPHICS*/}
-                <LargeButton onClick={() => { setCurrPage(<BloomPage />) }}> {/*BLOOM*/}
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={loadQuick ? 0 : 1800} title='- GAMES AND GRAPHICS -'> {/*GAME AND GRAPHICS*/}
+                <LargeButton onClick={() => { setCurrPage(<BloomPage />) }} startColor='#590d22' endColor='#a4133c'> {/*BLOOM*/}
                   <img src='bloom_button.png'></img>
                 </LargeButton >
-                <LargeButton onClick={() => { setCurrPage(<CopyPastePage />) }}>{/*COPY PASTE*/}
+                <LargeButton onClick={() => { setCurrPage(<CopyPastePage />) }} startColor='#a4133c' endColor='#ff4d6d'>{/*COPY PASTE*/}
                   <img src='copy_paste_button.png'></img>
                 </LargeButton>
-                <LargeButton onClick={() => { setCurrPage(<DungeonGamePage />) }}> {/*DUNGEON GAME*/}
+                <LargeButton onClick={() => { setCurrPage(<DungeonGamePage />) }} startColor='#ff4d6d' endColor='#ff8fa3'> {/*DUNGEON GAME*/}
                   <img src='dungeon_game_button.png'></img>
                 </LargeButton>
-                <LargeButton onClick={() => { setCurrPage(<GrapplingHookPage />) }}> {/*UNREAL GRAPPLER*/}
+                <LargeButton onClick={() => { setCurrPage(<GrapplingHookPage />) }} startColor='#ff8fa3' endColor='#ffb3c1'> {/*UNREAL GRAPPLER*/}
                   <img src='unreal_button.png'></img>
                 </LargeButton>
               </SectionDiv>
-              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={loadQuick ? 0 : 2400} title='• WEB DEVELOPMENT'> {/*WEB DEV*/}
-                <LargeButton onClick={() => { setCurrPage(<AcesPage />) }}> {/*ACES*/}
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={loadQuick ? 0 : 2400} title='- WEB DEVELOPMENT -'> {/*WEB DEV*/}
+                <LargeButton onClick={() => { setCurrPage(<AcesPage />) }} startColor='#f7b267' endColor='#f4845f'> {/*ACES*/}
                   <img src='acesonline_button.png'></img>
                 </LargeButton>
-                <LargeButton onClick={() => { setCurrPage(<PointsPage />) }}> {/*POINTS*/}
+                <LargeButton onClick={() => { setCurrPage(<PointsPage />) }} startColor='#f4845f' endColor='#f27059'> {/*POINTS*/}
                   <img src='practicalanalytics_button.png'></img>
                 </LargeButton>
-                <LargeButton onClick={() => { setCurrPage(<PracticalMediaPage />) }}> {/*PRACTICAL MEDIA*/}
+                <LargeButton onClick={() => { setCurrPage(<PracticalMediaPage />) }} startColor='#f27059' endColor='#f25c54'> {/*PRACTICAL MEDIA*/}
                   <img src='practicalmedia_button.png'></img>
                 </LargeButton>
               </SectionDiv>
-              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={loadQuick ? 0 : 3200} title='• VISION AND IMAGE PROCESSING'> {/*VISION*/}
-                <LargeButton onClick={() => { setCurrPage(<AutoAlignPage />) }}> {/*AUTO ALIGN TOOL*/}
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={loadQuick ? 0 : 3200} title='- VISION AND IMAGE PROCESSING -'> {/*VISION*/}
+                <LargeButton onClick={() => { setCurrPage(<AutoAlignPage />) }} startColor='#22577a' endColor='#38a3a5'> {/*AUTO ALIGN TOOL*/}
                   <img src='autoalign_button.png'></img>
                 </LargeButton>
-                <LargeButton onClick={() => { setCurrPage(<SkyvisionPage />) }}> {/*SkyVision*/}
+                <LargeButton onClick={() => { setCurrPage(<SkyvisionPage />) }} startColor='#38a3a5' endColor='#57cc99'> {/*SkyVision*/}
                   <img src='skyvision_button.jpg'></img>
                 </LargeButton>
-                <LargeButton onClick={() => { setCurrPage(<AntivisionPage />) }}> {/*Antivision*/}
+                <LargeButton onClick={() => { setCurrPage(<AntivisionPage />) }} startColor='#57cc99' endColor='#80ed99'> {/*Antivision*/}
                   <img src='antivision_button.jpg'></img>
                 </LargeButton>
               </SectionDiv>
-              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={loadQuick ? 0 : 4000} title='• CONTROL AND SIMULATIONS'> {/*CONTROL AND SIMULATIONS*/}
-                <LargeButton onClick={() => { setCurrPage(<MPCPage />) }}> {/*CRESCENDO MPC*/}
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={loadQuick ? 0 : 4000} title='- CONTROL AND SIMULATIONS -'> {/*CONTROL AND SIMULATIONS*/}
+                <LargeButton onClick={() => { setCurrPage(<MPCPage />) }} startColor='#f72585' endColor='#7209b7'> {/*CRESCENDO MPC*/}
                   <img src='mpc_button.png'></img>
                 </LargeButton>
-                <LargeButton onClick={() => { setCurrPage(<VisualizerPage />) }}> {/*CHARGED UP VISUALIZER*/}
+                <LargeButton onClick={() => { setCurrPage(<VisualizerPage />) }} startColor='#7209b7' endColor='#3a0ca3'> {/*CHARGED UP VISUALIZER*/}
                   <img src='visualizer_button.png'></img>
                 </LargeButton>
-                <LargeButton onClick={() => { setCurrPage(<SkynetPage />) }}>{/*4416 AUTO*/}
+                <LargeButton onClick={() => { setCurrPage(<SkynetPage />) }} startColor='#3a0ca3' endColor='#4361ee'>{/*4416 AUTO*/}
                   <img src='skynet_button.png'></img>
                 </LargeButton>
               </SectionDiv>
