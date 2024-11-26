@@ -10,6 +10,11 @@ import SectionDiv from './components/sectionDiv'
 import LargeButton from './components/largeButton'
 import BloomPage from './pages/bloomPage'
 import CopyPastePage from './pages/copyPastePage'
+import DungeonGamePage from './pages/dungeonGame'
+import GrapplingHookPage from './pages/grapplingHookPage'
+import PointsPage from './pages/pointsPage'
+import PracticalMediaPage from './pages/practicalmediaPage'
+import AcesPage from './pages/acesPage'
 
 
 function App() {
@@ -49,34 +54,39 @@ function App() {
           </h1>
           <HorizontalLine startAnimation={letterCounter >= 14} maxWidth="70%" height="4px" color="hsl(0, 100%, 97%)" duration="2s" />
           {CurrPage ?
-            <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
               {CurrPage}
-              <button onClick={() => {setCurrPage(undefined); setEnableScroll(false)}} style={{color:"white", backgroundColor:"transparent", border:"1px solid white", marginTop:"10vh", width:"10vw"}}>
+              <button onClick={() => { setCurrPage(undefined); setEnableScroll(false) }} style={{ color: "white", backgroundColor: "transparent", border: "1px solid white", width: "10vw" }}>
                 ⇐ Return Home
               </button>
             </div> :
             <div style={{ overflowY: "auto", width: "100%", height: "75vh", marginTop: "3vh", overflowY: enableScroll ? 'auto' : 'hidden' }}>
-              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={1800}> {/*GAME AND GRAPHICS*/}
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={1800} title='• GAMES AND GRAPHICS'> {/*GAME AND GRAPHICS*/}
                 <LargeButton onClick={() => { setCurrPage(<BloomPage />) }}> {/*BLOOM*/}
                   <img src='bloom_button.png'></img>
                 </LargeButton >
                 <LargeButton onClick={() => { setCurrPage(<CopyPastePage />) }}>{/*COPY PASTE*/}
-                <img src='copy_paste_button.png'></img>
+                  <img src='copy_paste_button.png'></img>
                 </LargeButton>
-                <LargeButton> {/*DUNGEON GAME*/}
+                <LargeButton onClick={() => { setCurrPage(<DungeonGamePage />) }}> {/*DUNGEON GAME*/}
+                  <img src='dungeon_game_button.png'></img>
                 </LargeButton>
-                <LargeButton> {/*UNREAL GRAPPLER*/}
-                </LargeButton>
-              </SectionDiv>
-              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={2800}> {/*WEB DEV*/}
-                <LargeButton> {/*POINTS*/}
-                </LargeButton>
-                <LargeButton> {/*PRACTICAL MEDIA*/}
-                </LargeButton>
-                <LargeButton> {/*ACES*/}
+                <LargeButton onClick={() => { setCurrPage(<GrapplingHookPage />) }}> {/*UNREAL GRAPPLER*/}
+                  <img src='unreal_button.png'></img>
                 </LargeButton>
               </SectionDiv>
-              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={3800}> {/*VISION*/}
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={2800} title='• WEB DEVELOPMENT'> {/*WEB DEV*/}
+                <LargeButton onClick={() => { setCurrPage(<AcesPage />) }}> {/*ACES*/}
+                  <img src='acesonline_button.png'></img>
+                </LargeButton>
+                <LargeButton onClick={() => { setCurrPage(<PointsPage />) }}> {/*POINTS*/}
+                  <img src='practicalanalytics_button.png'></img>
+                </LargeButton>
+                <LargeButton onClick={() => { setCurrPage(<PracticalMediaPage />) }}> {/*PRACTICAL MEDIA*/}
+                  <img src='practicalmedia_button.png'></img>
+                </LargeButton>
+              </SectionDiv>
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={3800} title='• VISION AND IMAGE PROCESSING'> {/*VISION*/}
                 <LargeButton> {/*AUTO ALIGN TOOL*/}
                 </LargeButton>
                 <LargeButton> {/*SkyVision*/}
@@ -84,7 +94,7 @@ function App() {
                 <LargeButton> {/*Antivision*/}
                 </LargeButton>
               </SectionDiv>
-              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={4800}> {/*CONTROL AND SIMULATIONS*/}
+              <SectionDiv duration={'0.8s'} startAnimation={letterCounter >= 14} delayms={4800} title='• CONTROL AND SIMULATIONS'> {/*CONTROL AND SIMULATIONS*/}
                 <LargeButton> {/*CRESCENDO MPC*/}
                 </LargeButton>
                 <LargeButton> {/*CHARGED UP VISUALIZER*/}

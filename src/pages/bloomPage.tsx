@@ -3,7 +3,7 @@ import React, { ReactNode, useEffect, useRef, useState } from 'react';
 const BloomPage = () => {
 
     return (
-        <div>
+        <div style={{marginBottom: "10vh"}}>
             <p>
                 For the past five years, I have dedicated my efforts to developing a custom game engine to overcome the challenges I encountered while using Unreal Engine. This 2D-focused engine, which includes light 3D capabilities, is a high-performance, low-level solution that utilizes a minimal set of libraries and leverages OpenGL 4.3 (Core) and C++14 for rendering. Tailored specifically to my needs, my engine achieves frame rates that are 200% to 250% faster than those of other commercial engines, allowing for a smoother and more responsive experience. This project not only highlights my technical expertise but also reflects my commitment to solving real-world problems in game development.
             </p>
