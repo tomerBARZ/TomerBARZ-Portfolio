@@ -6,6 +6,10 @@
   color: hsl(0, 100%, 97%);
 }
 
+p {
+  font-size: 1.5vh;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
