@@ -47,7 +47,7 @@ function App() {
     <>
       <Vignette />
       <OrbitSpace />
-      <div style={{ width: "50vw", height: "90vh", zIndex: 999, position: "relative", overflow: "hidden" }}>
+      <div style={{ width: "50vw", minHeight: "90vh", zIndex: 999, position: "absolute", marginLeft:"auto", marginRight:"auto",left:0,right:0, top:'3vh', overflow: "hidden" }}>
         <div style={{ width: "100%", textAlign: "left" }}>
           {width < 768 ?
             <>
@@ -67,7 +67,7 @@ function App() {
                   onType={() => setLetterCounter((counter) => counter + 1)}
                 />
               </h1>
-              <HorizontalLine startAnimation={letterCounter >= 14} maxWidth="70%" height="4px" color="hsl(0, 100%, 97%)" duration="2s" />
+              <HorizontalLine startAnimation={letterCounter >= 14} maxWidth="70%" height="0.4vh" color="hsl(0, 100%, 97%)" duration="2s" />
               {CurrPage ?
                 <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                   {CurrPage}
@@ -129,7 +129,7 @@ function App() {
           }
         </div>
       </div>
-      <label className='glow' style={{ width: "100%", textAlign: "center", display: "flex", justifyContent: "center", zIndex: "999", position: "relative" }}>Call me +972-528408878  (｡•̀ᴗ-)✧</label>
+      <label className='glow' style={{ width: "100%", textAlign: "center", display: "flex", justifyContent: "center", zIndex: "999", position: "absolute", bottom:"1vh", marginLeft:"auto", marginRight:"auto", left:"0", right:"0" }}>Call me +972-528408878  (｡•̀ᴗ-)✧</label>
     </>
   )
 }
