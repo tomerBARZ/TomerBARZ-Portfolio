@@ -9,11 +9,11 @@ const CopyPastePage = () => {
             </p>
             <p style={{ marginTop: "5vh" }}>You can find everything about it <a href="https://tomer-barz.itch.io/copypaste" style={{ color: "yellow" }}>here</a>.</p>
             <div style={{ width: "100%", display: "flex", justifyContent: "space-around" }}>
-                <div style={{ display: "flex", flexDirection: "column", width: "400px", height: "250px", justifyContent: "space-between", textAlign: "center" }}>
+                <div style={{ display: "flex", flexDirection: "column", width: "20vw", justifyContent: "space-between", textAlign: "center" }}>
                     <img src='copy_paste_image1.png' />
                     <label>The player looking in a question related to player movement, looking for movement related snippets</label>
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", width: "400px", height: "250px", justifyContent: "space-between", textAlign: "center" }}>
+                <div style={{ display: "flex", flexDirection: "column", width: "20vw", justifyContent: "space-between", textAlign: "center" }}>
                     <img src='copy_paste_image2.png' />
                     <label>Editing the movement code to add jumping, and trying to reach the next star</label>
                 </div>
