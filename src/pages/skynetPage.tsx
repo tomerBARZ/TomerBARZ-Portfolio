@@ -15,7 +15,7 @@ const SkynetPage = () => {
                     <iframe className="fusionFrame" src="https://a360.co/3uotU9z" width={width/4} height={width/4} style={{overflow:"hidden"}}></iframe>
                     <label>The team's submission for the 2024 season</label>
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", maxWidth: "25vw", justifyContent: "space-between", textAlign: "center" }}>
+                <div style={{ display: "flex", flexDirection: "column", maxWidth: "20vw", justifyContent: "space-between", textAlign: "center" }}>
                     <video src="skynet_video.mp4" autoPlay loop muted />
                     <label>An autonomous sequence performed by this year's robot</label>
                 </div>
