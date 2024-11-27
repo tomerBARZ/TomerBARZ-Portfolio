@@ -9,15 +9,15 @@ const BloomPage = () => {
             </p>
             <p style={{marginTop:"5vh"}}>Here is some footage from early in the project's development:</p>
             <div style={{ width: "100%", display: "flex", justifyContent: "space-around" }}>
-                <div style={{ display: "flex", flexDirection: "column", maxWidth: "300px",height: "250px", justifyContent: "space-between", textAlign: "center" }}>
+                <div style={{ display: "flex", flexDirection: "column", maxWidth: "15vw", justifyContent: "space-between", textAlign: "center" }}>
                     <img src='bloom_image1.png' />
                     <label>First rendering tests with pixel art character rigs</label>
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", maxWidth: "300px",height: "250px", justifyContent: "space-between", textAlign: "center" }}>
+                <div style={{ display: "flex", flexDirection: "column", maxWidth: "15vw", justifyContent: "space-between", textAlign: "center" }}>
                     <video src="bloom_boxer_testing.mp4" autoPlay loop/>
                     <label>One of the first projects made with my engine, testing the capabilities of the 1.0.0 release</label>
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", maxWidth: "300px",height: "250px", justifyContent: "space-between", textAlign: "center" }}>
+                <div style={{ display: "flex", flexDirection: "column", maxWidth: "15vw", justifyContent: "space-between", textAlign: "center" }}>
                     <video src="bloom_entities_testing.mp4" autoPlay loop/>
                     <label>Testing how much physical entities affect performance, the average FPS remained above 1500</label>
                 </div>
